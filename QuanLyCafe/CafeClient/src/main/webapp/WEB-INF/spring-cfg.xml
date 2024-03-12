@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+   http://www.springframework.org/schema/beans     
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context 
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd
+   http://www.springframework.org/schema/mvc 
+   http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+	<!-- Cấu hình hỗ trợ khai báo annotaition -->
+	<mvc:annotation-driven validator="validator" />
+
+	<!-- Cấu hình thư viện Spring MVC sẽ quét các controller -->
+	<context:component-scan
+		base-package="com.cafe.controller" />
+	<!-- Cấu hình resource tài nguyên dùng chung cho dự án -->
+	<mvc:resources location="/assets/" mapping="/assets/**"></mvc:resources>
+
+
+	<!-- Cấu hình thư mục chứa các Views -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>
+
+	<!-- Cấu hình hỗ trợ I18N -->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<!-- <property name="basename" value="classpath:language/messages" /> -->
+		<!-- <property name="basenames" -->
+		<!-- value="classpath:language/messages,classpath:language/errors" /> -->
+		<property name="basenames">
+			<list>
+				<value>classpath:language/messages</value>
+				<value>classpath:language/errors</value>
+			</list>
+		</property>
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<property name="defaultLocale" value="en" />
+		<property name="cookieName" value="myAppLocaleCookie"></property>
+		<property name="cookieMaxAge" value="3600"></property>
+	</bean>
+
+	<mvc:interceptors>
+		<bean
+			class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<property name="paramName" value="lang" />
+		</bean>
+	</mvc:interceptors>
+
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource" ref="messageSource" />
+	</bean>
+
+	<!-- Cấu hình upload file -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- setting maximum upload size: bytes >>> 1kb = 1024 bytes >>> 1Mb = 
+			1024kb -->
+		<property name="maxUploadSize" value="1048576" />
+
+	</bean>
+
+</beans>

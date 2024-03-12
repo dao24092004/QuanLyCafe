@@ -1,0 +1,135 @@
+/* resources/css/style.css */
+
+@charset "UTF-8";
+
+/* Reset some default styles for consistency */
+body, h1, h2, h3, p, ul, ol, li, form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Common styling for IDs and classes */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+.nav-link {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.info-section {
+    margin-top: 20px;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.info-table th, .info-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.info-table th {
+    background-color: #f2f2f2;
+}
+
+.box-err {
+    color: red;
+    font-weight: bold;
+}
+
+/* Additional styles for your specific pages */
+#page-container {
+    background-color: #f4f4f4; /* Light Gray Background */
+    color: #333; /* Dark Gray Text */
+    padding: 20px;
+}
+
+.link {
+    color: #3498db; /* Soft Blue */
+    text-decoration: none;
+    margin-right: 10px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.link:hover {
+    color: #2980b9; /* Slightly Darker Blue on hover */
+}
+
+#page-container form {
+    margin-top: 20px;
+}
+
+#page-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+#page-container th, #page-container td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+#page-container th {
+    background-color: #3498db; /* Soft Blue */
+    color: white;
+}
+
+#page-container input[type="text"],
+#page-container input[type="number"],
+#page-container input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #bdc3c7; /* Light Gray Border */
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease-in-out;
+}
+
+#page-container input[type="text"]:focus,
+#page-container input[type="number"]:focus,
+#page-container input[type="date"]:focus {
+    border-color: #3498db; /* Soft Blue on focus */
+}
+
+#page-container input[type="submit"] {
+    background-color: #3498db; /* Soft Blue */
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+#page-container input[type="submit"]:hover {
+    background-color: #2980b9; /* Slightly Darker Blue on hover */
+}

@@ -1,0 +1,33 @@
+
+@charset "UTF-8";
+/* Đổi màu nền cho tiêu đề h1 */
+h1 {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Đổi màu cho nút Search */
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+/* Đặt kiểu cho bảng */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Đặt kiểu cho các hàng chẵn */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Đặt kiểu cho nút xóa */
+img[alt="Delete"] {
+    cursor: pointer;
+}

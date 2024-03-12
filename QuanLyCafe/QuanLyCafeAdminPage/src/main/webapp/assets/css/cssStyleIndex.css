@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/* Reset some default styles */
+body, h1, p, form, input, table {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+
+#header {
+    color: #ffffff; /* Chữ trắng */
+    padding: 10px;
+    background-color: #0077cc; /* Màu xanh nước biển */
+    text-align: center;
+}
+
+
+/* Navigation Styles */
+#navigation {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#navigation a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: #3366cc;
+    transition: color 0.3s ease-in-out;
+}
+
+#navigation a:hover {
+    color: #ff6600;
+}
+
+/* Form Styles */
+.form-input {
+    padding: 5px;
+}
+
+.form-submit {
+    padding: 5px 10px;
+    background-color: #3366cc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.form-submit:hover {
+    background-color: #ff6600;
+}
+
+/* Table Styles */
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.custom-table th, .custom-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.custom-table th {
+    background-color: #3366cc;
+    color: #fff;
+}
+
+.custom-table td:hover {
+    background-color: #f0f0f0;
+}
+
+/* Add styles for the search-form and statistic-form */
+#search-form, #statistic-form {
+    margin-bottom: 20px;
+}
+
+#search-form label, #statistic-form label {
+    margin-right: 10px;
+}
+
+#search-form .form-input, #statistic-form .form-input {
+    width: 50px;
+}
+
+#search-form .form-submit, #statistic-form .form-submit {
+    margin-top: 10px;
+    width: 80px;
+}

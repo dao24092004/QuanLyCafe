@@ -1,0 +1,168 @@
+@charset "UTF-8";
+/* Reset some default styles for cross-browser consistency */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.page-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #3498db;
+    margin-right: 10px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.error-msg {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.search-form {
+    margin-top: 20px;
+}
+
+.search-input, .search-submit {
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #3498db;
+}
+
+.search-submit {
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Table Styles */
+.product-table, .cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.product-table th, .product-table td,
+.cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.product-table th, .cart-table th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.cart-table {
+    margin-top: 0; /* Reset top margin for cart-table */
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.cart-table th {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.cart-table tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+.cart-table tr:hover {
+    background-color: #bdc3c7;
+}
+
+/* Button Styles */
+.remove-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Common Styles for Product Management and Cart Pages */
+#product-management, #cart-page {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust styles as needed for a professional and user-friendly layout */
+/* ... (previous styles) */
+
+/* Cart Table Styles */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    background-color: #3498db;
+    color: #fff;
+}
+
+.cart-table tr:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+.cart-table tr:hover {
+    background-color: #bdc3c7;
+}
+
+.cart-table img {
+    width: 60px;
+    height: 60px;
+}
+
+.cart-table .remove-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.cart-table .remove-btn:hover {
+    background-color: #c0392b;
+}
+
+/* ... (common styles) */
+
